@@ -17,10 +17,7 @@ var getElementsByClassName = function(className) {
     has children, send each "up" to the function
   */
   //console.log(document.body.element.classList);
-
-
   var matchArr = [];
-
   var searchNodes = function(node) {
     if (node.classList && node.classList.contains(className)) {
       matchArr.push(node);
@@ -31,11 +28,11 @@ var getElementsByClassName = function(className) {
         searchNodes(node.childNodes[i]);
       }
     }
-  }
+  };
 
   searchNodes(document.body);
   
-  console.log('matchArr ' + matchArr);
+  //console.log('matchArr ' + matchArr);
 
   return matchArr;
 };
