@@ -48,6 +48,7 @@ var parseJSON = function(json) {
     throw undefined;
   };
   
+  
   // control/special characters
   var controlCharacters = {
     '\"': '\"',
@@ -240,7 +241,7 @@ var parseJSON = function(json) {
     if (char !== '[') {
       errorMessage('an array should start with an opening bracket \'[\'');
     }
-    if(next() === ']') {
+    if (next() === ']') {
       // return an empty array
       // need to increment next() in case of '[]'
       next();
